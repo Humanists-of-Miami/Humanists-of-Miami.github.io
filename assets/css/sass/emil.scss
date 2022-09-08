@@ -1,0 +1,32 @@
+a:hover {
+	text-decoration: none;
+	color: #d70015;
+}
+
+* {
+	cursor: default !important;
+}
+
+*:hover {
+	cursor: default !important;
+}
+
+.btn:hover {
+	cursor: default;
+}
+
+a {
+	cursor: default;
+	text-decoration: none;
+	color: rgb(255,59,48);
+}
+
+@import url('https://rsms.me/inter/inter.css');
+html, body {
+	font-family: 'Inter', sans-serif;
+}
+@supports (font-variation-settings: normal) {
+	html, body {
+	    font-family: 'Inter var', sans-serif;
+    }
+}

@@ -1,0 +1,27 @@
+---
+permalink: "/feed.xml"
+---
+
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+<title>{{ global.title }}</title>
+<link href="{{ 'feed.xml' | prepend: global.url }}" rel="self"/>
+<link href="{{ global.url }}"/>
+<id>{{ global.url }}</id>
+
+{% for post in collections["posts"] %}
+<entry>
+<author>
+<name>{{ global.author }}</name>
+<email>{{ global.links.mail }}</email>
+</author>
+<title>{{ post.data.title }}</title>
+<link href="{{ post.url | remove: 'index.html' | prepend: global.url }}"/>
+<pubdate>{{ post.date.rfc_2822 }}</pubdate>
+<updated>{{ post.date.rfc_2822 }}</updated>
+<id>{{ post.url | remove: 'index.html' | prepend: global.url }}</id>
+<content type="html">{{ post.content | escape }}</content>
+</entry>
+{% endfor %}
+</feed>

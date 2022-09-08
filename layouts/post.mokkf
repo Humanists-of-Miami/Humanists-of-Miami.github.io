@@ -1,0 +1,28 @@
+---
+layout: default
+markdown: false
+---
+<article class="post">
+  <!-- Post title container -->
+  <div class="post-title-container no-hero-margin">
+    <!-- Post title -->
+    <div class="heading-container">
+      <h1>
+        <a href="{{ page.url }}" title="{{ page.data.title }}" target="_blank">
+          {{ page.data.title }}
+      </h1>
+    <!-- Post meta -->
+      <div class="post-meta">
+        <span>{{ page.date.rfc_2822 }}</span>
+        <span>
+          {% for tag in page.data.tags %}
+              <a href="{{ 'tag/' | prepend: global.url }}{{ tag }}">#{{ tag }}</a>
+          {% endfor %}
+        </span>
+      </div>
+    </div>
+  </div>
+
+    <!-- Post content -->
+    {{ page.content | remove: '&lt;!–-break-–&gt;' }}
+</article>

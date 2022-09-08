@@ -1,0 +1,8 @@
+---
+layout: default
+markdown: false
+---
+<div class="page" markdown="1">
+{% include page_title.html title=page.data.title subtitle=global.authors[page.data.author].name %}
+{{ page.content }}
+</div>

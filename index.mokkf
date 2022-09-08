@@ -1,0 +1,59 @@
+---
+layout: default
+permalink: index.html
+collection: pages
+author: Club
+title: Home
+markdown: false
+---
+
+{% assign urls = '' | split: '' %}
+{% assign post_date_rfc_3339 = collections["posts"] | map: 'date' | sort: "rfc_3339" %}
+{%- for post_date in post_date_rfc_3339 reversed -%}
+  {%- for post in collections["posts"] -%}
+    {%- if post.date.rfc_3339 == post_date.rfc_3339 -%}
+      {%- unless urls contains post.url -%}
+        {% assign urls = urls | push: post.url %}
+            {%- unless post.data.tags contains "draft" -%}
+
+<article class="blog">
+
+  <!-- Post title container -->
+  <div class="post-title-container-nohero">
+
+    <!-- Post title -->
+      <h1>
+        <a href="{{ post.url | remove: 'index.html' | prepend: global.url }}" title="{{ post.data.title }}">{{ post.data.title }}</a>
+      </h1>
+    <!-- Post meta -->
+      <div class="post-meta-nohero">
+
+        <span>{{ post.date.rfc_2822 }}</span>
+
+        <span class="post-meta-link-nohero"><a href="{{ post.url | remove: 'index.html' | prepend: global.url }}">&#9642;</a></span>
+
+        <span>
+          {% for tag in post.data.tags %}
+              <a href="{{ 'tag/' | prepend: global.url }}{{ tag }}">#{{ tag }}</a>
+          {% endfor %}
+        </span>
+      </div>
+
+  </div>
+
+{{ post.content | remove: '&lt;!–-break-–&gt;' }}
+        <div class="readmore">
+          <a href="{{ post.url | remove: 'index.html' | prepend: global.url }}" role="button">Read more</a>
+        <div>
+
+</article>
+  <!-- Last post does not need a hr -->
+{% if forloop.last == false %}
+  <hr>
+{% endif %}
+
+{%- endunless -%}
+      {%- endunless -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endfor -%}

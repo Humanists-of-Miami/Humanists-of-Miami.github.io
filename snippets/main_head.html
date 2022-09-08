@@ -1,0 +1,45 @@
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<title>{% if page.data.title == "Home" %}{{ global.title }} <!-- &middot; --> {{ global.description }}{% else %}{% if page.data.tag %}{{ global.data.tags[page.tag].name }}{% else %}{{ page.data.title }}{% endif %} &#9642; {{ global.title }}{% endif %}</title>
+
+
+<meta name="description" content="{% if page.data.description %}{{ page.data.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ global.description }}{% endif %}">
+{% if page.tags %}<meta name="keywords" content="{{ page.tags | join: ', ' }}">{% endif %}
+<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: global.url }}">
+
+{% if page.data.title %} {% assign title = page.data.title %} {% else %} {% assign title = global.title %} {% endif %}
+{% if page.data.description %} {% assign description = page.data.description %} {% else %} {% assign description = global.description %} {% endif %}
+{% if page.data.keywords %} {% assign keywords = page.data.keywords %} {% else %} {% assign keywords = global.keywords %} {% endif %}
+{% if page.data.cover %} {% assign cover = page.data.cover %} {% else %} {% assign cover = global.cover %} {% endif %}
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="{{ title }}" />
+<meta name="twitter:description" content="{{ description }}" />
+<meta name="twitter:image" content="{{ global.url }}{{ cover }}" />
+
+<!-- Open Graph -->
+<meta property="og:locale" content="{{ global.locale }}">
+<meta property="og:type" content="article">
+<meta property="og:title" content="{{ page.data.title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: global.url }}">
+<meta property="og:site_name" content="{{ global.title }}">
+
+<!-- Styles -->
+<link rel="stylesheet" href="{{ "assets/vendor/normalize-css/normalize.css" | prepend: global.url }}">
+<link rel="stylesheet" href="{{ "assets/css/main.css" | prepend: global.url }}">
+
+{% if global.load_google_fonts %}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family={{ global.load_google_fonts }}">
+<style>
+    html {
+      font-family: {{ global.font }};
+    }
+</style>
+{% endif %}
+
+{% if global.inline_footnotes == true %}
+<link rel="stylesheet" href="{{ "assets/css/bf.css" | prepend: global.url }}">
+{% endif %}
