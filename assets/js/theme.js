@@ -87,13 +87,7 @@ Object.entries = (object) => Object.keys(object).map(
     }
   }
   
-  const iconForTheme = (themeName) => {
-    if (themeName === NightTheme.themeName) {
-      return 'icon-invert_colors'
-    } else {
-      return 'icon-invert_colors2'
-    }
-  }
+  const iconForTheme = 'icon-droplet';
   
   // initiate
   
