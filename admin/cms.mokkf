@@ -9,7 +9,7 @@ markdown: false
 {% capture head %}
 {% include main_head.html %}
 {% endcapture %}
-{{ head | replace: '<link rel="stylesheet" href="https://Humanists-of-Miami.github.io/assets/css/main.css" />', '' }}
+{{ head | replace: '<link rel="stylesheet" href="https://humanists-of-miami.github.io/assets/css/main.css">', '' }}
 <body>
   <script src="https://unpkg.com/netlify-cms/dist/netlify-cms.js"></script>
 </body>
