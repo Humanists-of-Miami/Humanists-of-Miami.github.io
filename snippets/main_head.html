@@ -16,14 +16,14 @@
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="{{ title }}" />
+<meta name="twitter:title" content="{% if page.data.title == "Home" %}{{ global.title }}{% else %}{{ page.data.title }}{% endif %}" />
 <meta name="twitter:description" content="{{ description }}" />
 <meta name="twitter:image" content="{{ global.url }}{{ cover }}" />
 
 <!-- Open Graph -->
 <meta property="og:locale" content="{{ global.locale }}">
 <meta property="og:type" content="article">
-<meta property="og:title" content="{{ page.data.title }}">
+<meta property="og:title" content="{% if page.data.title == "Home" %}{{ global.title }}{% else %}{{ page.data.title }}{% endif %}">
 <meta property="og:description" content="{{ description }}">
 <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: global.url }}">
 <meta property="og:site_name" content="{{ global.title }}">
