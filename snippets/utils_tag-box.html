@@ -1,0 +1,18 @@
+<div class="tag-box">
+    <hr/>
+    <span>Check out other tags:</span>
+    <ul>
+       {% assign tags = global.tags | sort %}
+       {% for tag in tags %}
+       <li>
+         <a href="{{ global.url }}tag/{{ tag | slugify }}/">#{{ tag }}</a>
+       </li>
+       {% endfor %}
+    </ul>
+    <hr/>
+    </div>
+    
+    
+    {% comment %}
+    {{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})
+    {% endcomment %}

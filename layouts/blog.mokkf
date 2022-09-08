@@ -9,11 +9,7 @@ markdown: false
 
     <!-- Post title -->
       <h1>
-        {% if page.data.link != nil %}
-        <a href="{{ page.data.link }}" title="{{ page.data.title }}" title="{{ page.data.title }}" target="_blank">{{ page.data.title }}</a> &rarr;
-        {% else %}
-          <a href="{{ page.url | prepend:global.url }}" title="{{ page.data.title }}">{{ page.data.title }}</a>
-        {% endif %}
+        <a href="{{ page.url | remove: 'index.html' | prepend: global.url }}" title="{{ page.data.title }}">{{ page.data.title }}</a>
       </h1>
     <!-- Post meta -->
       <div class="post-meta-nohero">
@@ -36,11 +32,11 @@ markdown: false
     {% if global.blog.excerpts == true %}
       {{ page.data.excerpt }}
         <div class="readmore">
-          <a href="{{ page.data.url | prepend:global.url }}" role="button">Read more</a>
+          <a href="{{ page.url | remove: 'index.html' | prepend: global.url }}" role="button">Read more</a>
         <div>
 
     {% else if global.blog.excerpts == false %}
-      {{ page.data.content | remove: '&lt;!–-break-–&gt;' }}
+      {{ page.content | remove: '&lt;!–-break-–&gt;' }}
     {% endif %}
 
   {% endif %}

@@ -1,7 +1,7 @@
 locale: en_US
 title: "Humanists of Miami"
 description: "The club for free thinkers, curious souls, and rakish libertines."
-url: "file:///home/emil/Documents/GitHub/Humanists-of-Miami.github.io/output/"
+url: "https://humanists-of-miami.github.io/"
 author: Humanists of Miami
 keywords: ["philosophy", "debate", "club", "blog", "miami university"]
 logo_path: assets/images/miami/logo.svg

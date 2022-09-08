@@ -1,8 +1,9 @@
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-<title>{% if page.data.title == "Home" %}{{ global.title }} <!-- &middot; --> {{ global.description }}{% else %}{% if page.data.tag %}{{ global.data.tags[page.tag].name }}{% else %}{{ page.data.title }}{% endif %} &#9642; {{ global.title }}{% endif %}</title>
+<title>{% if page.data.title == "Home" %}{{ global.title }} &middot; {{ global.description }}{% else %}{% if page.data.tag %}{{ global.data.tags[page.tag].name }}{% else %}{{ page.data.title }}{% endif %} &#9642; {{ global.title }}{% endif %}</title>
 
+{% include favicon.html %}
 
 <meta name="description" content="{% if page.data.description %}{{ page.data.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ global.description }}{% endif %}">
 {% if page.tags %}<meta name="keywords" content="{{ page.tags | join: ', ' }}">{% endif %}
