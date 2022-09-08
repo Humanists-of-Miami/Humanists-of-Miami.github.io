@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: Humanists-of-Miami/Humanists-of-Miami.github.io
-  branch: master
+  branch: main
 media_folder: "assets/img/uploads"
 site_url: https://Humanists-of-Miami.github.io
 logo_url: https://Humanists-of-Miami.github.io/assets/images/miami/logo.svg
