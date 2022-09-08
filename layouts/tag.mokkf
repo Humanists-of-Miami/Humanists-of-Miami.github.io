@@ -13,10 +13,24 @@ Articles tagged with <strong>‘{{ page.data.title }}’</strong>
 
 {% include page_title.html title=page.data.title subtitle=page_subtitle %}
 
-{% if global.tags[page.slug] %}
-    {% for post in global.tags[page.slug] %}
+{% assign num_posts = 0 %}
+
+{% assign tags = global.tags | sort_natural %}
+{%- for tag in tags -%}
+  {%- capture name -%}{{ tag }}{%- endcapture -%}
+
+{% assign urls = '' | split: '' %}
+  {% assign post_date_rfc_3339 = collections["posts"] | map: 'date' | sort: "rfc_3339" %}
+    {%- for post_date in post_date_rfc_3339 reversed -%}
+    {%- for post in collections["posts"] -%}
+      {%- if post.date.rfc_3339 == post_date.rfc_3339 -%}
+        {%- unless urls contains post.url -%}
+          {% assign urls = urls | push: post.url %}
+            {%- if post.data.tags -%}
+              {%- if post.data.tags contains tag -%}
 
       {% assign currentdate = post.date.rfc_2822 %}
+      {% assign date = currentdate %}
         {% if currentdate != date %}
           {% unless forloop.first %}
           </ul>
@@ -26,6 +40,7 @@ Articles tagged with <strong>‘{{ page.data.title }}’</strong>
             {% assign date = currentdate %}
            {% endif %}
 
+        {% assign num_posts = num_posts | plus: 1 %}
           <li>
             <a href="{{ post.url | remove: 'index.html' | prepend: global.url }}">
             <span>{{ post.data.title }}</span>
@@ -37,9 +52,15 @@ Articles tagged with <strong>‘{{ page.data.title }}’</strong>
           </ul>
           {% endif %}
 
-       {% endfor %}
+       {%- endif -%}
+            {%- endif -%}
+        {%- endunless -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endfor -%}
+  {%- endfor -%}
 
-     {% else %}
+     {% if num_posts == 0 %}
    <p>There are no posts in this tag.</p>
 {% endif %}
 
