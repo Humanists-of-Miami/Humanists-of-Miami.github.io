@@ -2704,5 +2704,8 @@ html, body {
 @supports (font-variation-settings: normal) {
   html, body {
     font-family: 'Inter var', sans-serif; } }
+@media only screen and (max-width: 616px) {
+  .logosvg {
+    display: none !important; } }
 
 /*# sourceMappingURL=main.css.map */
