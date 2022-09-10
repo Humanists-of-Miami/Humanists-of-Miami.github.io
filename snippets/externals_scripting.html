@@ -4,3 +4,13 @@
 {% if global.inline_footnotes == true %}
 <script type="text/javascript" src="{{ "assets/js/barefoot.js" | prepend: global.url }}"></script>
 {% endif %}
+{%- if page.permalink == '/archive/index.html' -%}
+<script src="{{ global.url }}/assets/js/search.min.js"></script>
+<script>
+    var search = KliseSearch({
+        searchInput: document.getElementById("search-input"),
+        resultsContainer: document.getElementById("search-results"),
+        json: "{{ global.url }}/assets/search.json",
+    });
+</script>
+{%- endif -%}
