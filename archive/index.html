@@ -163,7 +163,14 @@
 <script type="text/javascript" src="https://humanists-of-miami.github.io/assets/js/theme.js"></script>
 
 <script type="text/javascript" src="https://humanists-of-miami.github.io/assets/js/barefoot.js"></script>
-
+<script src="https://humanists-of-miami.github.io//assets/js/search.min.js"></script>
+<script>
+    var search = KliseSearch({
+        searchInput: document.getElementById("search-input"),
+        resultsContainer: document.getElementById("search-results"),
+        json: "https://humanists-of-miami.github.io//assets/search.json",
+    });
+</script>
         
     </body>
 </html>
