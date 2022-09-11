@@ -16,8 +16,7 @@ Articles tagged with <strong>‘{{ page.data.title }}’</strong>
 {% assign num_posts = 0 %}
 
 {% assign tags = global.tags | sort_natural %}
-{%- for tag in tags -%}
-  {%- capture name -%}{{ tag }}{%- endcapture -%}
+{% assign tag = page.data.title | remove_first: "#" %}
 
 {% assign urls = '' | split: '' %}
   {% assign post_date_rfc_3339 = collections["posts"] | map: 'date' | sort: "rfc_3339" %}
@@ -57,7 +56,6 @@ Articles tagged with <strong>‘{{ page.data.title }}’</strong>
         {%- endunless -%}
       {%- endif -%}
     {%- endfor -%}
-  {%- endfor -%}
   {%- endfor -%}
 
      {% if num_posts == 0 %}
