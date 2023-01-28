@@ -13,8 +13,8 @@ permalink: "/feed.xml"
 {% for post in collections["posts"] %}
 <entry>
 <author>
-<name>{{ global.author }}</name>
-<email>{{ global.links.mail }}</email>
+<name>{{ global.authors[post.data.author].name }}</name>
+<email>{{ global.authors[post.data.author].email }}</email>
 </author>
 <title>{{ post.data.title }}</title>
 <link href="{{ post.url | remove: 'index.html' | prepend: global.url }}"/>

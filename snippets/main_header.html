@@ -3,7 +3,7 @@
       <div class="logo">
 
         <a href="{{ global.url }}">{{ global.title }}</a>
-        <object type="image/svg+xml" data="{{ global.logo_path | prepend: global.url }}" class="logosvg">Your browser does not support SVG images</object>
+        <object type="image/svg+xml" data="{{ global.logo_path | prepend: global.url }}" class="logosvg">Your browser does not support SVG images.</object>
       </div>
 
         <ul>
@@ -15,62 +15,62 @@
       <ul>
         {% if global.links.youtube %}
         <li>
-            <a href="https://youtube.com/{{ global.links.youtube }}" target="_blank" class="smaller">
+            <a href="https://youtube.com/{{ global.links.youtube }}" target="_blank" class="smaller" title="YouTube">
               <span class="icon-youtube"></span>
             </a>
         </li>
         {% endif %}
         {% if global.links.stackoverflow %}
         <li>
-            <a href="https://stackoverflow.com/{{ global.links.stackoverflow }}" target="_blank" class="smaller">
+            <a href="https://stackoverflow.com/{{ global.links.stackoverflow }}" target="_blank" class="smaller" title="Stack Overflow">
               <span class="icon-stackoverflow"></span>
             </a>
         </li>
         {% endif %}
         {% if global.links.twitter %}
         <li>
-            <a href="https://twitter.com/{{ global.links.twitter }}" target="_blank" class="smaller">
+            <a href="https://twitter.com/{{ global.links.twitter }}" target="_blank" class="smaller" title="Twitter">
               <span class="icon-twitter"></span>
             </a>
         </li>
         {% endif %}
         {% if global.links.github %}
         <li>
-            <a href="https://github.com/{{ global.links.github }}" target="_blank" class="smaller">
+            <a href="https://github.com/{{ global.links.github }}" target="_blank" class="smaller" title="GitHub">
               <span class="icon-github"></span>
             </a>
         </li>
         {% endif %}
         {% if global.links.instagram %}
         <li>
-            <a href="https://instagram.com/{{ global.links.instagram }}" target="_blank" class="smaller">
+            <a href="https://instagram.com/{{ global.links.instagram }}" target="_blank" class="smaller" title="Instagram">
               <span class="icon-instagram"></span>
             </a>
         </li>
         {% endif %}
         {% if global.links.facebook %}
         <li>
-            <a href="https://facebook.com/groups/{{ global.links.facebook }}" target="_blank" class="smaller">
+            <a href="https://facebook.com/groups/{{ global.links.facebook }}" target="_blank" class="smaller" title="Facebook">
               <span class="icon-facebook"></span>
             </a>
         </li>
         {% endif %}
         {% if global.links.mail %}
         <li>
-            <a href="mailto:{{ global.links.mail }}" target="_blank">
+            <a href="mailto:{{ global.links.mail }}" target="_blank" title="Email">
               <span class="icon-envelop"></span>
             </a>
         </li>
         {% endif %}
         {% if global.links.rss == true %}
         <li>
-            <a href="{{ '/feed.xml' | prepend: global.url }}" target="_blank">
+            <a href="{{ '/feed.xml' | prepend: global.url }}" target="_blank" title="RSS feed">
                 <span class="icon-rss"></span>
             </a>
         </li>
         {% endif %}
         <li>
-            <a href="#" onclick="switchTheme()" title="Switch theme?">
+            <a href="#" onclick="switchTheme()" title="Switch theme">
               <span class="icon-droplet" id="theme-switcher"></span>
             </a>
         </li>

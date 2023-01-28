@@ -4,13 +4,14 @@ markdown: false
 ---
 <article class="post">
   <!-- Post title container -->
-  <div class="post-title-container no-hero-margin">
+  <div class="post-title-container">
     <!-- Post title -->
     <div class="heading-container">
       <h1>
         <a href="{{ page.url }}" title="{{ page.data.title }}" target="_blank">
           {{ page.data.title }}
-      </h1>
+      </h1><br/>
+      <a href="mailto:{{ global.authors[page.data.author].email }}">{{ global.authors[page.data.author].name }}</a><br/>
     <!-- Post meta -->
       <div class="post-meta">
         <span>{{ page.date.rfc_2822 }}</span>
@@ -25,4 +26,6 @@ markdown: false
 
     <!-- Post content -->
     {{ page.content | remove: '&lt;!–-break-–&gt;' }}
+
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 </article>

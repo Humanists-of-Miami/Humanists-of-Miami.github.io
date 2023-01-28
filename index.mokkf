@@ -24,13 +24,14 @@ markdown: false
     <!-- Post title -->
       <h1>
         <a href="{{ post.url | remove: 'index.html' | prepend: global.url }}" title="{{ post.data.title }}">{{ post.data.title }}</a>
-      </h1>
+      </h1><br/>
+      <a href="mailto:{{ global.authors[post.data.author].email }}">{{ global.authors[post.data.author].name }}</a><br/>
     <!-- Post meta -->
       <div class="post-meta-nohero">
 
         <span>{{ post.date.rfc_2822 }}</span>
 
-        <span class="post-meta-link-nohero"><a href="{{ post.url | remove: 'index.html' | prepend: global.url }}">&#9642;</a></span>
+        <span class="post-meta-link-nohero">&#9642;</span>
 
         <span>
           {% for tag in post.data.tags %}
