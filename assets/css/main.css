@@ -194,7 +194,7 @@ header {
     margin-bottom: 2rem;
   }
   .menu,
-.social {
+  .social {
     display: block;
     text-align: center;
     width: 100%;
@@ -316,12 +316,12 @@ article li + li {
 
 @media (max-width: 48rem) {
   .page-title,
-.post-title {
+  .post-title {
     height: 10rem;
     margin-bottom: 2rem;
   }
   .page-title h1,
-.post-title h1 {
+  .post-title h1 {
     font-size: 2.5rem;
   }
   .post-meta {
