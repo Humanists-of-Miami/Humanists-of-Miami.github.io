@@ -6,7 +6,7 @@ markdown: false
   <!-- Post title container -->
   <div class="post-title-container">
     <!-- Post title -->
-    <div class="heading-container">
+    <div>
       <h1>
         <a href="{{ page.url }}" title="{{ page.data.title }}" target="_blank">
           {{ page.data.title }}
