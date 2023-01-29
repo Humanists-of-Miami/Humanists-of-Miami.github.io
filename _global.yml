@@ -23,6 +23,8 @@ navigation:
     link: about/
   - name: Archive
     link: archive/
+  - name: Contribute
+    link: admin/
 tags:
   - "draft"
   - "memo"

@@ -7,8 +7,9 @@
       </div>
 
         <ul>
-            <li><a href="{{ '/about' | prepend: global.url }}">about</a></li>
-            <li><a href="{{ '/archive' | prepend: global.url }}">archive</a></li>
+            {% for nav_item in global.navigation %}
+            <li><a href="{{ nav_item.link | prepend: global.url }}">{{ nav_item.name | downcase }}</a></li>
+            {% endfor %}
         </ul>
     </div>
     <div class="social">
