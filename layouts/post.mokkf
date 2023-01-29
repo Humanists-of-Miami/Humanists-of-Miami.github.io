@@ -2,28 +2,27 @@
 layout: default
 markdown: false
 ---
-<article class="post">
-  <!-- Post title container -->
-  <div class="post-title-container">
-    <!-- Post title -->
-    <div>
-      <h1>
-        <a href="{{ page.url }}" title="{{ page.data.title }}" target="_blank">
-          {{ page.data.title }}
-      </h1><br/>
-      <a href="mailto:{{ global.authors[page.data.author].email }}">{{ global.authors[page.data.author].name }}</a><br/>
-    <!-- Post meta -->
-      <div class="post-meta">
-        <span>{{ page.date.rfc_2822 }}</span>
-        <span>
-          {% for tag in page.data.tags %}
-              <a href="{{ 'tag/' | prepend: global.url }}{{ tag }}">#{{ tag }}</a>
-          {% endfor %}
-        </span>
-      </div>
+<!-- Post title container -->
+<div class="post-title-container">
+  <!-- Post title -->
+  <div>
+    <h1>
+      <a href="{{ page.url }}" title="{{ page.data.title }}" target="_blank">
+        {{ page.data.title }}
+    </h1><br/>
+    <a href="mailto:{{ global.authors[page.data.author].email }}">{{ global.authors[page.data.author].name }}</a><br/>
+  <!-- Post meta -->
+    <div class="post-meta">
+      <span>{{ page.date.rfc_2822 }}</span>
+      <span>
+        {% for tag in page.data.tags %}
+            <a href="{{ 'tag/' | prepend: global.url }}{{ tag }}">#{{ tag }}</a>
+        {% endfor %}
+      </span>
     </div>
   </div>
-
+</div>
+<article class="post">
     <!-- Post content -->
     {{ page.content | remove: '&lt;!–-break-–&gt;' }}
 
