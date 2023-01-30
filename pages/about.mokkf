@@ -14,7 +14,8 @@ Occasionally, we have faculty members come in to talk on various topics that we 
 **Got thoughts? [Join us](https://muhub.campuslabs.com/engage/organization/hom)!**
 
 ## Contact
-{% for author in global.authors %}
+{% assign sorted_authors = global.authors | sort_natural: "bio" | reverse %}
+{% for author in sorted_authors %}
 ### [{{ author.name }}](mailto:{{ author.email }})
 {% assign roles = author.bio | split: ", " %}
 {% for role in roles %}
