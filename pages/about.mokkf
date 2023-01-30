@@ -13,7 +13,11 @@ Occasionally, we have faculty members come in to talk on various topics that we 
 
 **Got thoughts? [Join us](https://muhub.campuslabs.com/engage/organization/hom)!**
 
-### Contact
+## Contact
 {% for author in global.authors %}
-[{{ author.name }}](mailto:{{ author.email }})\
+### [{{ author.name }}](mailto:{{ author.email }})
+{% assign roles = author.bio | split: ", " %}
+{% for role in roles %}
+- {{ role }}
+{% endfor %}
 {% endfor %}

@@ -31,11 +31,15 @@ tags:
   - "micro"
   - "notes"
 authors:
+  - short: Club
+    name: Humanists of Miami
+    bio: >-
+      
+    email: humanists@miamioh.edu
   - short: Grant
     name: Grant McCrary
     bio: >-
-      Events Coordinator (Fall 2022 to Spring 2023)
-      President (Spring 2023 to Present)
+      Events Coordinator (Fall 2022 to Spring 2023), President (Spring 2023 to Present)
     email: mccrargm@miamioh.edu
   - short: Emil
     name: Emil Sayahi
@@ -43,10 +47,9 @@ authors:
       Vice President (Spring 2023 to Present)
     email: sayahie@miamioh.edu
   - short: Evan
-    name: Evan Gabriel Burke
+    name: Evan Burke
     bio: >-
-      Treasurer (Fall 2022 to Spring 2023)
-      Historian (Spring 2023 to Present)
+      Treasurer (Fall 2022 to Spring 2023), Historian (Spring 2023 to Present)
     email: burkeej4@miamioh.edu
   - short: Nishan
     name: Nishan Amgain
@@ -83,8 +86,3 @@ authors:
     bio: >-
       Event Planner (Spring 2023 to Present)
     email: darbys@miamioh.edu
-  - short: Club
-    name: Humanists of Miami
-    bio: >-
-      Free thinkers, curious souls, and rakish libertines.
-    email: humanists@miamioh.edu
