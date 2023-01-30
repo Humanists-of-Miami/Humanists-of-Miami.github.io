@@ -31,59 +31,59 @@ tags:
   - "micro"
   - "notes"
 authors:
-  Grant:
+  - short: Grant
     name: Grant McCrary
     bio: >-
       Events Coordinator (Fall 2022 to Spring 2023)
       President (Spring 2023 to Present)
     email: mccrargm@miamioh.edu
-  Emil:
+  - short: Emil
     name: Emil Sayahi
     bio: >-
       Vice President (Spring 2023 to Present)
     email: sayahie@miamioh.edu
-  Evan:
+  - short: Evan
     name: Evan Gabriel Burke
     bio: >-
       Treasurer (Fall 2022 to Spring 2023)
       Historian (Spring 2023 to Present)
     email: burkeej4@miamioh.edu
-  Nishan:
+  - short: Nishan
     name: Nishan Amgain
     bio: >-
       President (Fall 2021 to Spring 2023)
     email: amgainn@miamioh.edu
-  Ais:
+  - short: Ais
     name: Aisulu Murzagulova
     bio: >-
       Vice President (Fall 2021 to Spring 2023)
     email: murzagak@miamioh.edu
-  Catarina:
+  - short: Catarina
     name: Catarina Palmer
     bio: >-
       Secretary (Fall 2022 to Present)
     email: palmer29@miamioh.edu
-  Connor:
+  - short: Connor
     name: Connor Owens
     bio: >-
       Social Media Manager (Spring 2022 to Spring 2023)
     email: owenscr5@miamioh.edu
-  Joe:
+  - short: Joe
     name: Joe Suek
     bio: >-
       Teasurer (Spring 2023 to Present)
     email: suekji@miamiOH.edu
-  Ginkgo:
+  - short: Ginkgo
     name: "Cecelia 'Ginkgo' Hemmerle"
     bio: >-
       Social Chair (Spring 2023 to Present)
     email: hemmercb@miamioh.edu
-  Sam:
+  - short: Sam
     name: Sam Darby
     bio: >-
       Event Planner (Spring 2023 to Present)
     email: darbys@miamioh.edu
-  Club:
+  - short: Club
     name: Humanists of Miami
     bio: >-
       Free thinkers, curious souls, and rakish libertines.

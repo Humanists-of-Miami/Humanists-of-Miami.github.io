@@ -2,6 +2,7 @@
 layout: default
 markdown: false
 ---
+{% assign author = global.authors | where: "short", page.data.author | first %}
 <!-- Post title container -->
 <div class="post-title-container">
   <!-- Post title -->
@@ -10,7 +11,7 @@ markdown: false
       <a href="{{ page.url }}" title="{{ page.data.title }}" target="_blank">
         {{ page.data.title }}
     </h1><br/>
-    <a href="mailto:{{ global.authors[page.data.author].email }}">{{ global.authors[page.data.author].name }}</a><br/>
+    <a href="mailto:{{ author.email }}">{{ author.name }}</a><br/>
   <!-- Post meta -->
     <div class="post-meta">
       <span>{{ page.date.rfc_2822 }}</span>

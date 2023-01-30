@@ -4,12 +4,13 @@ markdown: false
 ---
 [
   {% for post in collections["posts"] %}
+    {% assign author = global.authors | where: "short", post.data.author | first %}
     {
       "title"    : "{{ post.data.title | escape }}",
       "tags"     : "{{ post.data.tags | join: ', ' }}",
       "url"      : "{{ post.url | remove: 'index.html' | prepend: global.url }}",
       "date"     : "{{ post.date.rfc_3339 }}",
-      "author"     : "{{ global.authors[post.data.author].name }}"
+      "author"     : "{{ author.name }}"
     } {%- unless forloop.last -%},{%- endunless -%}
   {% endfor %}
 ]

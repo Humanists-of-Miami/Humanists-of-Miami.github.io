@@ -24,7 +24,7 @@ collections:
       - {label: "Collection", name: "collection", widget: "hidden", default: "posts"}
       - {label: "Permalink", name: "permalink", widget: "hidden", default: "/{{ page.data.collection }}/{{ page.date.year }}/{{ page.date.month }}/{{ page.date.day }}/{{ page.name }}/index.html"}
       - {label: "Title", name: "title", widget: "string", required: true}
-      - {label: "Author", name: "author", widget: "select", options: ["Emil", "Evan", "Nishan", "Ais", "Catarina", "Connor", "Club"], required: true}
+      - {label: "Author", name: "author", widget: "select", options: ["Emil", "Evan", "Nishan", "Ais", "Catarina", "Connor", "Club", "Grant", "Joe", "Ginkgo", "Sam"], required: true}
       - {label: "Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", format: "YYYY-MM-DDTHH:mm:ss+05:00", required: true}
       - {label: "Tags", name: "tags", widget: "list", required: true, allow_add: true, default: ["draft"]}
       - {label: "Body", name: "body", widget: "markdown", required: true}
@@ -44,5 +44,5 @@ collections:
       - {label: "Collection", name: "collection", widget: "hidden", default: "pages"}
       - {label: "Permalink", name: "permalink", widget: "hidden", default: "none"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Author", name: "author", widget: "select", options: ["Em", "Evan", "Both"]}
+      - {label: "Author", name: "author", widget: "select", options: ["Emil", "Evan", "Nishan", "Ais", "Catarina", "Connor", "Club", "Grant", "Joe", "Ginkgo", "Sam"]}
       - {label: "Body", name: "body", widget: "markdown"}

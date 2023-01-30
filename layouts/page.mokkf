@@ -2,7 +2,9 @@
 layout: default
 markdown: false
 ---
+{% assign author = global.authors | where: "short", page.data.author | first %}
+
 <div class="page" markdown="1">
-{% include page_title.html title=page.data.title subtitle=global.authors[page.data.author].name %}
+{% include page_title.html title=page.data.title subtitle=author.name %}
 {{ page.content }}
 </div>

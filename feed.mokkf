@@ -11,10 +11,11 @@ permalink: "/feed.xml"
 <id>{{ global.url }}</id>
 
 {% for post in collections["posts"] %}
+{% assign author = global.authors | where: "short", post.data.author | first %}
 <entry>
 <author>
-<name>{{ global.authors[post.data.author].name }}</name>
-<email>{{ global.authors[post.data.author].email }}</email>
+<name>{{ author.name }}</name>
+<email>{{ author.email }}</email>
 </author>
 <title>{{ post.data.title }}</title>
 <link href="{{ post.url | remove: 'index.html' | prepend: global.url }}"/>

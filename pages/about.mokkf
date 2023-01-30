@@ -14,5 +14,6 @@ Occasionally, we have faculty members come in to talk on various topics that we 
 **Got thoughts? [Join us](https://muhub.campuslabs.com/engage/organization/hom)!**
 
 ### Contact
-
-[sayahie@miamioh.edu](mailto:sayahie@miamioh.edu)
+{% for author in global.authors %}
+[{{ author.name }}](mailto:{{ author.email }})\
+{% endfor %}
