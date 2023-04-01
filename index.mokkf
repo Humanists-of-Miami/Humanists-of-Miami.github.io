@@ -4,7 +4,7 @@ permalink: index.html
 collection: pages
 author: Club
 title: Home
-markdown: false
+markup: false
 ---
 
 {% assign urls = '' | split: '' %}
@@ -48,8 +48,9 @@ markdown: false
         <div>
 
 </article>
+  
+{% if forloop.first == false %}
   <!-- Last post does not need a hr -->
-{% if forloop.last == false %}
   <hr>
 {% endif %}
 

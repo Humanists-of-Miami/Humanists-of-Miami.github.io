@@ -1,4 +1,5 @@
 locale: en_US
+minify: true
 title: "Humanists of Miami"
 description: "The club for free thinkers, curious souls, and rakish libertines."
 url: "https://humanists-of-miami.github.io/"

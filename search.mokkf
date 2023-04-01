@@ -1,6 +1,6 @@
 ---
 permalink: "/assets/search.json"
-markdown: false
+markup: false
 ---
 [
   {% for post in collections["posts"] %}

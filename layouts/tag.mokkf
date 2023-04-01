@@ -1,6 +1,6 @@
 ---
 layout: default
-markdown: false
+markup: false
 ---
 {% capture page_subtitle %}
 {% if page.data.description %}

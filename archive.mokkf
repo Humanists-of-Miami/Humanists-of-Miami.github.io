@@ -4,7 +4,7 @@ title: Archive
 permalink: "/archive/index.html"
 collection: pages
 author: Club
-markdown: false
+markup: false
 ---
 
 <div class="search-article">

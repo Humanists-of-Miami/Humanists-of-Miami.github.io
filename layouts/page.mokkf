@@ -1,6 +1,6 @@
 ---
 layout: default
-markdown: false
+markup: false
 ---
 {% assign author = global.authors | where: "short", page.data.author | first %}
 
