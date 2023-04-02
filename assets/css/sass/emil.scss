@@ -21,6 +21,14 @@ a {
 	color: rgb(255,59,48);
 }
 
+.social li a {
+	border-bottom: 0.15em hidden;
+}
+
+.social li a:hover {
+	border-bottom: 0.15em solid;
+}
+
 @import url('https://rsms.me/inter/inter.css');
 html, body {
 	font-family: 'Inter', sans-serif;
