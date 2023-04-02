@@ -3541,11 +3541,11 @@ a {
 }
 
 .social li a {
-  border-bottom: 0.15em hidden;
+  border-bottom: 0.15em transparent solid;
 }
 
 .social li a:hover {
-  border-bottom: 0.15em solid;
+  border-bottom: 0.15em var(--link-color) solid;
 }
 
 html, body {
