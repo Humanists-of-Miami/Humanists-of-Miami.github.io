@@ -4,7 +4,7 @@ permalink: index.html
 collection: pages
 author: Club
 title: Home
-markup: false
+markdown: false
 ---
 
 {% assign urls = '' | split: '' %}
