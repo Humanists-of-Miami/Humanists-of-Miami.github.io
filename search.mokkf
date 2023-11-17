@@ -3,10 +3,11 @@ permalink: "/assets/search.json"
 markdown: false
 ---
 [
-  {% for post in collections["posts"] %}
+  {% for post in collections["posts"] reversed %}
     {% assign author = global.authors | where: "short", post.data.author | first %}
     {
       "title"    : "{{ post.data.title | escape }}",
+      "content"    : "{{ post.content | escape }}",
       "tags"     : "{{ post.data.tags | join: ', ' }}",
       "url"      : "{{ post.url | remove: 'index.html' | prepend: global.url }}",
       "date"     : "{{ post.date.rfc_3339 }}",

@@ -59,7 +59,7 @@ Articles tagged with <strong>‘{{ page.data.title }}’</strong>
   {%- endfor -%}
 
      {% if num_posts == 0 %}
-   <p>There are no posts in this tag.</p>
+   <p>There are no posts with this tag.</p>
 {% endif %}
 
   {% include utils_tag-box.html %}
