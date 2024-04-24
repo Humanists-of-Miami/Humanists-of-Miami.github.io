@@ -6,6 +6,7 @@ markdown: false
 <?xml version="1.0" encoding="utf-8"?>
 
 <feed xmlns="http://www.w3.org/2005/Atom">
+<updated>{{ global.date.rfc_3339 }}</updated>
 <title>{{ global.title }}</title>
 <link href="{{ 'feed.xml' | prepend: global.url }}" rel="self"/>
 <link href="{{ global.url }}"/>
@@ -19,10 +20,10 @@ markdown: false
 <email>{{ author.email }}</email>
 </author>
 <title>{{ post.data.title }}</title>
-<link href="{{ post.url | remove: 'index.html' | prepend: global.url }}"/>
-<pubdate>{{ post.date.rfc_2822 }}</pubdate>
-<updated>{{ post.date.rfc_2822 }}</updated>
-<id>{{ post.url | remove: 'index.html' | prepend: global.url }}</id>
+<link href="{{ post.url | remove: 'index.html' | remove: global.url | url_encode | prepend: global.url }}"/>
+<pubDate>{{ post.date.rfc_3339 }}</pubDate>
+<updated>{{ post.date.rfc_3339 }}</updated>
+<id>{{ post.url | remove: 'index.html' | remove: global.url | url_encode | prepend: global.url }}</id>
 <content type="html">{{ post.content | escape }}</content>
 </entry>
 {% endfor %}
