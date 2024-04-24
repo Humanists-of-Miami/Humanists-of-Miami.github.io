@@ -38,58 +38,82 @@ authors:
     bio: >-
       
     email: humanists@miamioh.edu
+    former: false
   - short: Grant
     name: Grant McCrary
     bio: >-
       Treasurer (Fall 2023 to Spring 2024), President (Spring 2023 to Fall 2023), Events Coordinator (Fall 2022 to Spring 2023)
     email: mccrargm@miamioh.edu
+    former: true
   - short: Emil
     name: Emil Sayahi
     bio: >-
       Vice President (Spring 2023 to Spring 2024)
     email: sayahie@miamioh.edu
+    former: true
   - short: Evan
     name: Evan Burke
     bio: >-
       Historian (Spring 2023 to Spring 2024), Treasurer (Fall 2022 to Spring 2023)
     email: burkeej4@miamioh.edu
+    former: false
   - short: Nishan
     name: Nishan Amgain
     bio: >-
       President (Fall 2021 to Spring 2023)
     email: amgainn@miamioh.edu
+    former: true
   - short: Ais
     name: Aisulu Murzagulova
     bio: >-
       Vice President (Fall 2021 to Spring 2023)
     email: murzagak@miamioh.edu
+    former: true
   - short: Catarina
     name: Catarina Palmer
     bio: >-
-      Secretary (Fall 2022 to Present)
+      Vice President (Spring 2024 to Present), Secretary (Fall 2022 to Spring 2024)
     email: palmer29@miamioh.edu
+    former: false
   - short: Connor
     name: Connor Owens
     bio: >-
       Social Media Manager (Spring 2022 to Spring 2023)
     email: owenscr5@miamioh.edu
+    former: true
   - short: Joe
     name: Joe Suek
     bio: >-
       Teasurer (Spring 2023 to Fall 2023)
     email: suekji@miamiOH.edu
+    former: true
   - short: Ginkgo
     name: "Cecelia 'Ginkgo' Hemmerle"
     bio: >-
       Social Chair (Spring 2023 to Fall 2023)
     email: hemmercb@miamioh.edu
+    former: true
   - short: Sam
     name: Sam Darby
     bio: >-
-      President (Fall 2023 to Present), Event Planner (Spring 2023 to Fall 2023)
+      President (Fall 2023 to Fall 2025), Event Planner (Spring 2023 to Fall 2023)
     email: darbys@miamioh.edu
+    former: true
   - short: AJ
     name: AJ Lovett
     bio: >-
-      Event Planner (Fall 2023 to Present)
+      Treasurer (Spring 2024), Event Planner (Fall 2023 to Spring 2024)
     email: lovetta@miamioh.edu
+    former: true
+  - short: Anastasija
+    name: Anastasija Mladenovska
+    bio: >-
+      Treasurer (Spring 2024)
+    email: mladena@miamioh.edu
+    former: true
+  - short: Gabriel
+    name: Gabriel Powell
+    bio: >-
+      Historian (Spring 2024 to Present), Secretary (Spring 2024 to Present)
+    email: powellgt@miamioh.edu
+    former: false

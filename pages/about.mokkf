@@ -13,12 +13,25 @@ Occasionally, we have faculty members come in to talk on various topics that we 
 
 **Got thoughts? [Join us](https://muhub.campuslabs.com/engage/organization/hom)!**
 
-## Contact
 {% assign sorted_authors = global.authors | sort_natural: "bio" | reverse %}
+## Contact
 {% for author in sorted_authors %}
+{% if author.former == false %}
 ### [{{ author.name }}](mailto:{{ author.email }})
 {% assign roles = author.bio | split: ", " %}
 {% for role in roles %}
 - {{ role }}
 {% endfor %}
+{% endif %}
+{% endfor %}
+
+## Former Members
+{% for author in sorted_authors %}
+{% if author.former == true %}
+### [{{ author.name }}](mailto:{{ author.email }})
+{% assign roles = author.bio | split: ", " %}
+{% for role in roles %}
+- {{ role }}
+{% endfor %}
+{% endif %}
 {% endfor %}
